@@ -60,7 +60,7 @@ TIME_ZONE = getConfig('TIME_ZONE') or 'Asia/Tashkent'
 
 HEADER_MSG = getConfig('HEADER_MSG') or "🤖 <a href='https://github.com/nodirhajiev/mirror-bot-status'><b>Status</b></a> <b>⚡MDB⚡</b> 🤖"
 
-FOOTER_MSG = getConfig('FOOTER_MSG') or "🫂 Join: https://t.me/nodirdrivebots\n\n<b>⚒ Powered by</b> <a href='https://t.me/nodir_)khajiev_bot'>⚡NXD⚡</a>"
+FOOTER_MSG = getConfig('FOOTER_MSG') or "🫂 Join: https://t.me/nodirdrivebots\n\n<b>⚒ Powered by</b> <a href='https://t.me/nodir_khajiev_bot'>⚡NXD⚡</a>"
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
