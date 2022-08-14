@@ -58,9 +58,9 @@ except:
 
 TIME_ZONE = getConfig('TIME_ZONE') or 'Asia/Tashkent'
 
-HEADER_MSG = getConfig('HEADER_MSG') or "🤖 <a href='https://github.com/nodirhajiev/mirror-bot-status'><b>Status</b></a> <b>⚡MDB⚡</b> 🤖"
+HEADER_MSG = getConfig('HEADER_MSG') or "🤖 <b>Status ⚡MDB⚡</b> 🤖"
 
-FOOTER_MSG = getConfig('FOOTER_MSG') or "🫂 Join: https://t.me/nodirdrivebots\n\n<b>⚒ Powered by</b> <a href='https://t.me/nodir_khajiev_bot'>⚡NXD⚡</a>"
+FOOTER_MSG = getConfig('FOOTER_MSG') or "🫂 Join: <a href='https://t.me/nodirdrivebots'>⚡MDB Group⚡</a>\n\n<b>⚒ Powered by</b> <a href='https://t.me/nodir_khajiev_bot'>⚡NXD⚡</a>"
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
@@ -147,22 +147,22 @@ def bot_status():
             resp = rget(f"{bot['base_url_of_bot']}/status")
             if resp.status_code == 200:
                 resp = resp.json()
-                s_msg += f'\n┌<b>Bot</b>: {bot["bot_uname"]} ✅\n'
-                s_msg += f'├<b>Commit Date</b>: {resp["commit_date"]}\n'
-                s_msg += f'├<b>Alive</b>: {get_readable_time(resp["uptime"])}\n'
-                s_msg += f'├<b>Host</b>: {bot["host"]}\n'
-                s_msg += f'├<b>Up</b>: {get_readable_size(resp["network"]["sent"])} '
-                s_msg += f'| <b>DL</b>: {get_readable_size(resp["network"]["recv"])}\n'
-                s_msg += f'└<b>Free Disk</b>: {get_readable_size(resp["free_disk"])}/{get_readable_size(resp["total_disk"])}\n'
+                s_msg += f'\n┌<b>🤖Bot</b>: {bot["bot_uname"]} ✅\n'
+                s_msg += f'├<b>📝Commit Date</b>: {resp["commit_date"]}\n'
+                s_msg += f'├<b>👀Alive</b>: {get_readable_time(resp["uptime"])}\n'
+                s_msg += f'├<b>⚙️Host</b>: {bot["host"]}\n'
+                s_msg += f'├<b>⏫Up</b>: {get_readable_size(resp["network"]["sent"])} '
+                s_msg += f'| <b>⏬DL</b>: {get_readable_size(resp["network"]["recv"])}\n'
+                s_msg += f'└<b>💾Free Disk</b>: {get_readable_size(resp["free_disk"])}/{get_readable_size(resp["total_disk"])}\n'
                 active_bots += 1
             else:
-                s_msg += f'\n┌<b>Bot</b>: {bot["bot_uname"]} ❌\n'
-                s_msg += f'└<b>Host</b>: {bot["host"]}\n'
+                s_msg += f'\n┌<b>🤖Bot</b>: {bot["bot_uname"]} ❌\n'
+                s_msg += f'└<b>⚙️Host</b>: {bot["host"]}\n'
         except:
             try:
                 LOGGER.error(f'Error: {bot["bot_uname"]}')
-                s_msg += f'\n┌<b>Bot</b>: {bot["bot_uname"]} ❌\n'
-                s_msg += f'└<b>Host</b>: {bot["host"]}\n'
+                s_msg += f'\n┌<b>🤖Bot</b>: {bot["bot_uname"]} ❌\n'
+                s_msg += f'└<b>⚙️Host</b>: {bot["host"]}\n'
             except:
                 LOGGER.error('Error: json file is not valid')
             continue
@@ -171,7 +171,7 @@ def bot_status():
 
 def edit_bot_status():
     s_msg, active_bots, allbots = bot_status()
-    msg = f'\n🧲 <b>Available Bots</b>: {active_bots}/{allbots} \n'
+    msg = f'\n🤖 <b>Available Bots</b>: {active_bots}/{allbots} \n'
     msg += s_msg
     return msg
 
