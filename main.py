@@ -56,11 +56,11 @@ try:
 except:
     STATUS_UPDATE_INTERVAL = 10
 
-TIME_ZONE = getConfig('TIME_ZONE') or 'Asia/Calcutta'
+TIME_ZONE = getConfig('TIME_ZONE') or 'Asia/Tashkent'
 
-HEADER_MSG = getConfig('HEADER_MSG') or "🤖 <a href='https://github.com/junedkh/mirror-bot-status'><b>Status</b></a> <b>JMDKH Mirror Bots</b> 🤖"
+HEADER_MSG = getConfig('HEADER_MSG') or "🤖 <a href='https://github.com/nodirhajiev/mirror-bot-status'><b>Status</b></a> <b>⚡MDB⚡</b> 🤖"
 
-FOOTER_MSG = getConfig('FOOTER_MSG') or "🫂 Join: https://t.me/+3XSC23Veq2s2MmRl\n\n<b>⚒ Powered by</b> <a href='https://t.me/JMDKH_Team'>JMDKH Team ❤️</a>"
+FOOTER_MSG = getConfig('FOOTER_MSG') or "🫂 Join: https://t.me/nodirdrivebots\n\n<b>⚒ Powered by</b> <a href='https://t.me/nodir_)khajiev_bot'>⚡NXD⚡</a>"
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
