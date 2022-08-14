@@ -58,7 +58,7 @@ except:
 
 TIME_ZONE = getConfig('TIME_ZONE') or 'Asia/Tashkent'
 
-HEADER_MSG = getConfig('HEADER_MSG') or "🤖 <b>Status ⚡MDB⚡</b> 🤖"
+HEADER_MSG = getConfig('HEADER_MSG') or "🤖 <b>⚡MDB⚡ Status</b> 🤖"
 
 FOOTER_MSG = getConfig('FOOTER_MSG') or "🫂 Join: <a href='https://t.me/nodirdrivebots'>⚡MDB Group⚡</a>\n\n<b>⚒ Powered by</b> <a href='https://t.me/nodir_khajiev_bot'>⚡NXD⚡</a>"
 
